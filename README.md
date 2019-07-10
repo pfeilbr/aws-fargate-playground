@@ -1,5 +1,7 @@
 # aws-fargate-playground
 
+learn [AWS Fargate](https://aws.amazon.com/fargate/)
+
 ```sh
 # register task definition
 aws ecs register-task-definition --cli-input-json file://./task-definitions/hello-world.json
