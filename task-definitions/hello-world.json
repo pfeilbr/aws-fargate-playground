@@ -1,0 +1,28 @@
+{
+    "containerDefinitions": [
+        {
+            "command": [],
+            "image": "hello-world",
+            "essential": true,
+            "name": "hello-world",
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "secretOptions": [],
+                "options": {
+                    "awslogs-group": "/ecs/fargate-001",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "ecs"
+                }
+            }
+        }
+    ],
+    "family": "fargate-001",
+    "cpu": "256",
+    "memory": "512",
+    "networkMode": "awsvpc",
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "executionRoleArn": "arn:aws:iam::529276214230:role/ecsTaskExecutionRole",
+    "taskRoleArn": "arn:aws:iam::529276214230:role/ecsTaskExecutionRole"
+}
